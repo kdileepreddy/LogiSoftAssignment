@@ -1,0 +1,86 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h2>Create</h2>
+                    <div class="rating">
+                        <span class="fa fa-star fa-2x" *ngIf="flag; else demo" (click)="toggleIcon()"></span>
+                        <ng-template #demo>
+                            <span class="fa fa-star-o fa-2x" (click)="toggleIcon()"></span>
+                        </ng-template>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6" style="text-align: left;">
+                            <input type="text" [(ngModel)]="fname" placeholder="First Name" name="fname">
+                        </div>
+                        <div class="col-md-6" style="text-align: left;">
+                            <input type="text" [(ngModel)]="lname" placeholder="Last Name" name="lname">
+                        </div>
+                    </div>
+                    <!-- <ul class="list-group">
+              <ng-container *ngFor="let item of list  | slice:0:7">
+              <li class="list-group-item"><div>{{item.first_name+" "+item.last_name}} <i class="fa fa-star-o"></i></div></li>
+              
+            </ng-container> 
+            </ul> -->
+                    <br>
+                    <div class="row">
+                        <div class="col-md-6" style="text-align: left;">
+                            <div>
+                                <label><b>Gender</b></label>
+                            </div>
+
+                            <div>
+                                <input type="radio" [(ngModel)]="gender" value="Male" name="gender">Male
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="radio" [(ngModel)]="gender" value="female" name="gender">Female
+                            </div>
+                        </div>
+                        <div class="col-md-6" style="text-align: left;">
+                            <div>
+                                <label><b>Marital Status</b></label>
+                            </div>
+                            <div>
+                                <input type="radio" [(ngModel)]="MarriedStatus" value="Married"
+                                    name="MarriedStatus">Married &nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="radio" [(ngModel)]="MarriedStatus" value="Unmarried"
+                                    name="MarriedStatus">Unmarried
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row" *ngFor="let item of contactlist;let i=index;">
+                        <div class="card1">
+                            <div class="row">
+                            <div class="col-md-6" style="text-align: left;margin-top: 4px;">
+
+                                <select type="text" [(ngModel)]="contactlist[i].type" name="contactlist[i].type"
+                                    style="width:60%;">
+                                    <option  value="" disabled selected>Please Select</option>
+                                    <option value="Mobile Number">Mobile Number</option>
+                                    <option value="Landline Number">Landline Number</option>
+                                    <option value="Office Number">Office Number</option>
+                                </select>
+
+                            </div>
+                            <div class="col-md-6" style="text-align: left;">
+
+
+                                <input type="number" [(ngModel)]="contactlist[i].no" placeholder="number" name="contactlist[i].no">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <span class="fa fa-plus fa-2x"  (click)="addItem()"></span>&nbsp;&nbsp;&nbsp;
+                                <span class="fa fa-minus fa-2x"  (click)="removeItem(i)"></span>
+
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button type="button" class="btn btn-primary" (click)="Usercreation()">create</button>
+                </div>
+            </div>
+        </div>
+    </div>

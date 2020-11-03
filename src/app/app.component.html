@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-3.5" style="padding-top: 2%;">
+      <div class="card">
+        <div class="card-header">
+          <h2>Friends</h2>
+        </div>
+        <div class="card-body">
+          <button type="submit"><i class="fa fa-search"></i></button>
+          <input type="text" placeholder="Search.." name="searchText" [(ngModel)]="searchText">
+
+
+          <ul class="list-group">
+            <ng-container *ngFor="let item of list | search: searchText | slice:0:7;let indexOfelement=index;">
+            <li class="list-group-item">
+             <p (click)="EditUserDetails(indexOfelement)"> {{item.first_name+" "+item.last_name}} <i *ngIf="item.favorite" class="fa fa-star"></i><i *ngIf="!item.favorite" class="fa fa-star-o"></i></p>
+              </li>
+            
+            </ng-container>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-md-8" style="padding-top: 2%;">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
