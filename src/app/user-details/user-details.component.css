@@ -9,10 +9,7 @@
     
   }
 
-.rating{
-    text-align: right;
 
- }
  .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     padding: 16px;
@@ -22,7 +19,7 @@
     
   }
   .card-header{
-    text-align: left;
+   
     background-color: #ffffff;
   }
   .card-footer{

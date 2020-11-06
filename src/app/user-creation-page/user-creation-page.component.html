@@ -3,8 +3,8 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <h2>Create</h2>
-                    <div class="rating">
+                    <h2 class="float-left">Create</h2>
+                    <div class="float-right">
                         <span class="fa fa-star fa-2x" *ngIf="flag; else demo" (click)="toggleIcon()"></span>
                         <ng-template #demo>
                             <span class="fa fa-star-o fa-2x" (click)="toggleIcon()"></span>

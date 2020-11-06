@@ -16,15 +16,13 @@
     
   }
   .card-header{
-    text-align: left;
+ 
     background-color: #ffffff;
+    
   }
   .card-footer{
     text-align: right;
     background-color: #ffffff;
     border-top-color: #ffffff;
   }
-  .rating{
-     text-align: right;
-
-  }
+  
