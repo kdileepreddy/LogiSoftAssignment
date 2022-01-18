@@ -51,8 +51,7 @@ export class UserCreationPageComponent implements OnInit {
   addItem():void{
       var contactdetails:any ={};
       this.count=this.count+1;
-      // contactdetails.type=this.contactlist[this.count].type;
-      // contactdetails.no=this.contactlist[this.count].no;
+      
       
       this.contactlist.push(contactdetails);
       console.log
